@@ -1,188 +1,212 @@
-# Bank Loan Analysis – End to End Data Analytics Project (SQL + Python + Excel + Power BI + Tableau)
+# Bank Loan Analysis | SQL, Python, Excel, Power BI & Tableau
 
-A complete analytical study of bank loan performance using multiple tools such as **SQL, Python, Excel, Power BI, and Tableau**.  
-This project focuses on understanding borrower behavior, loan performance, risk categories, and business KPIs across the loan lifecycle.
+## Project Overview
 
----
+This project focuses on analyzing bank loan data to understand lending performance, borrower behavior, repayment patterns, and overall loan portfolio quality.
 
-##  Table of Contents  
-- [Project Overview](#project-overview)  
-- [Project Structure](#project-structure)  
-- [Objectives](#objectives)  
-- [Tools & Technologies](#tools--technologies)  
-- [Key Metrics (KPIs)](#key-metrics-kpis)  
-- [SQL Work](#sql-work)  
-- [Python Analysis](#python-analysis)  
-- [Excel Work](#excel-work)  
-- [Power BI Dashboard](#power-bi-dashboard)  
-- [Tableau Dashboard](#tableau-dashboard)  
-- [Insights](#insights)  
-- [Dataset Fields](#dataset-fields)  
-- [Author](#author)
+I worked with loan application data to calculate important business KPIs, analyze good and bad loans, identify monthly trends, and understand how different borrower characteristics relate to loan performance.
 
----
+The project uses SQL, Python, Excel, Power BI, and Tableau to perform data analysis and present the results through reports and interactive dashboards.
 
-##  Project Overview
+## Dataset Overview
 
-This is a comprehensive **Bank Loan Analysis** project where data was prepared, cleaned, analyzed, and visualized across various tools.  
-The project highlights borrower trends, loan volume patterns, repayment behavior, and good vs bad loan segmentation.
+The dataset contains loan application and borrower information.
 
----
+| Dataset Information | Value |
+|---|---:|
+| Total Records | 38,576 |
+| Total Columns | 24 |
+| Data Period | 2021 |
+| Total Loan Applications | 38,576 |
+| Good Loan Applications | 33,243 |
+| Bad Loan Applications | 5,333 |
 
-## 📁 Project Structure
+The dataset includes information such as loan amount, funded amount, total payment, interest rate, debt-to-income ratio (DTI), loan purpose, employment length, home ownership, and loan status.
+
+## Tools & Technologies
+
+| Tool | Usage |
+|---|---|
+| Excel | Data cleaning, Pivot Tables and analysis |
+| SQL | Data analysis, KPI calculations and queries |
+| Python | Data cleaning and exploratory data analysis |
+| Pandas & NumPy | Data manipulation |
+| Matplotlib | Data visualization |
+| Power BI | Interactive dashboards and reporting |
+| Tableau | Data visualization and dashboard development |
+
+## Key Performance Indicators (KPIs)
+
+The following metrics were calculated to understand the overall loan portfolio.
+
+| KPI | Result |
+|---|---:|
+| Total Loan Applications | 38,576 |
+| Total Funded Amount | $435.76 Million |
+| Total Amount Received | $473.07 Million |
+| Average Interest Rate | 12.05% |
+| Average DTI | 13.33% |
+| Good Loan Applications | 33,243 |
+| Good Loan Percentage | 86.18% |
+| Bad Loan Applications | 5,333 |
+| Bad Loan Percentage | 13.82% |
+
+### Good Loan vs Bad Loan Analysis
+
+Loans were divided into two categories:
+
+**Good Loans**
+- Fully Paid
+- Current
+
+**Bad Loans**
+- Charged Off
+
+| Metric | Good Loans | Bad Loans |
+|---|---:|---:|
+| Applications | 33,243 | 5,333 |
+| Application Percentage | 86.18% | 13.82% |
+| Funded Amount | $370.22M | $65.53M |
+| Amount Received | $435.79M | $37.28M |
+
+## Analysis Performed
+
+### 1. SQL Analysis
+
+Used SQL to analyze loan applications and calculate business KPIs.
+
+Key analysis included:
+
+- Total loan applications and funded amounts.
+- Total amount received from borrowers.
+- Month-to-date (MTD) and previous month-to-date (PMTD) analysis.
+- Good loan and bad loan analysis.
+- Average interest rate and DTI calculations.
+- Loan status distribution.
+- State-wise loan applications and funding.
+- Loan purpose analysis.
+- Employment length and home ownership analysis.
+- Loan term analysis.
+
+SQL concepts used:
+- SELECT, WHERE and GROUP BY
+- Aggregate Functions
+- CASE Statements
+- Joins
+- CTEs
+- Subqueries
+- Date Functions
+- Conditional Aggregation
+
+### 2. Python Analysis
+
+Used Python for data inspection, cleaning, and exploratory data analysis.
+
+Key activities:
+
+- Loaded and explored the loan dataset using Pandas.
+- Checked data types and missing values.
+- Identified duplicate records.
+- Performed data cleaning and preprocessing.
+- Analyzed loan status and borrower characteristics.
+- Calculated important loan performance metrics.
+- Created visualizations to understand patterns in the data.
+
+Libraries: Pandas, NumPy and Matplotlib.
+
+### 3. Excel Analysis
+
+Used Excel to organize and analyze loan application data.
+
+Work included:
+
+- Data cleaning and formatting.
+- Data validation.
+- Pivot Tables and Pivot Charts.
+- Loan purpose analysis.
+- State-wise loan analysis.
+- Funded amount and payment analysis.
+- Summary reports and KPI calculations.
+
+### 4. Power BI Dashboard
+
+Created interactive dashboards to monitor loan performance and key business metrics.
+
+The dashboard covers:
+
+- Overall loan application summary.
+- Total funded amount and amount received.
+- Good loan vs bad loan performance.
+- Monthly loan application trends.
+- State-wise loan distribution.
+- Loan purpose analysis.
+- Employment length analysis.
+- Home ownership and loan term analysis.
+- Interactive filters and slicers.
+
+### 5. Tableau Dashboard
+
+Created visual reports to explore loan performance and borrower patterns.
+
+Analysis includes:
+
+- Loan status distribution.
+- Monthly loan trends.
+- State-wise performance.
+- Good loan vs bad loan comparison.
+
+## Key Insights
+
+Based on the analysis, the following observations were identified:
+
+1. Out of 38,576 loan applications, 33,243 were classified as good loans, representing 86.18% of total applications.
+2. A total of 5,333 applications were classified as bad loans, accounting for 13.82%.
+3. The total funded amount was approximately $435.76 million, while the total amount received was approximately $473.07 million.
+4. Debt consolidation was the most common loan purpose.
+5. Loans with a 36-month term were more common than loans with a 60-month term.
+6. Fully Paid loans contributed the largest share of the amount received.
+7. Interest rate and debt-to-income ratio were useful metrics for comparing loan performance across borrower segments.
+
+## Project Structure
+
+```text
 bank-loan-analysis/
-│── SQL/           → SQL queries for KPIs, summary & overview
-│── Python/        → Jupyter notebooks for EDA and cleaning
-│── Excel/         → Raw and cleaned Excel files
-│── PowerBI/       → Final Power BI dashboard
-│── Tableau/       → Tableau workbook
+│
+└── bank-loan-analysis/
+    ├── SQL/
+    ├── Python/
+    ├── Excel/
+    ├── PowerBI/
+    ├── Tableau/
+    └── README.md
+```
 
+## What I Learned
 
+Through this project, I gained practical experience in:
 
+- Working with financial datasets.
+- Cleaning and preparing raw data.
+- Writing SQL queries for business analysis.
+- Performing exploratory data analysis using Python.
+- Calculating and validating business KPIs.
+- Creating interactive dashboards.
+- Converting raw data into meaningful business insights.
 
+## Conclusion
 
+This project helped me understand how data analytics can be used to evaluate loan performance, analyze borrower behavior, and monitor financial KPIs.
 
----
+By working with multiple tools, I practiced the complete analytics process, from data preparation and querying to visualization and business reporting.
 
-## 🎯 Objectives
+## About Me
 
-- Prepare and clean the loan dataset  
-- Analyze loan performance and risk patterns  
-- Identify **good vs bad loans**  
-- Build meaningful KPIs  
-- Create dashboards for interactive insights  
-- Perform month-wise and category-wise breakdowns  
-- Understand borrower characteristics  
+**Mohammad Varish**
 
----
+B.Tech in Computer Science and Engineering
 
-## 🛠 Tools & Technologies
+Skills: Excel | SQL | Python | Power BI | Tableau | Data Analytics
 
-- **SQL (MS SQL / MySQL)**  
-- **Python (Pandas, Numpy, Matplotlib)**  
-- **Jupyter Notebook**  
-- **Excel (Data Cleaning + Pivot Analysis)**  
-- **Power BI (Interactive Dashboarding)**  
-- **Tableau (Visual Storytelling)**  
+GitHub: https://github.com/mvaris54
 
----
-
-## 📊 Key Metrics (KPIs)
-
-- Total Loan Applications  
-- Month-to-Date (MTD) Applications  
-- Previous Month-to-Date (PMTD) Applications  
-- Total Funded Amount  
-- Total Amount Collected  
-- Average Interest Rate  
-- Average DTI  
-- Good Loan Percentage  
-- Bad Loan Percentage  
-- Loan Status Breakdown  
-
----
-
-## 🧾 SQL Work
-
-All SQL queries used for summary, overview, KPIs, and loan segmentation are available inside the **SQL folder**.
-
-Queries include:  
-- Loan counts  
-- MTD and PMTD calculations  
-- Good vs Bad Loan analysis  
-- Funded amount analysis  
-- Amount received  
-- State, Term, Purpose, Employment Length grouping  
-- Loan Status summary  
-
----
-
-## 🐍 Python Analysis
-
-Performed in Jupyter Notebook:  
-- Data loading  
-- Data cleaning  
-- Handling missing values  
-- Feature exploration  
-- Visual analysis (matplotlib)  
-- Identifying patterns in loan status, DTI, interest rate and borrower behavior  
-
-All notebooks are available inside the **Python folder**.
-
----
-
-## 📊 Excel Work
-
-- Raw data cleanup  
-- Date formatting  
-- Pivot tables for states, terms, purposes  
-- Aggregations for funded amount & amount received  
-- Exported clean dataset for BI tools  
-
-Files are included inside the **Excel folder**.
-
----
-
-## 📈 Power BI Dashboard
-
-Built multiple dashboard pages:  
-- Summary KPIs  
-- Good vs Bad Loans  
-- Borrower Overview (State, Purpose, Employment, Term)  
-- Interactive filters (Grade, Purpose, Home Ownership)  
-
-Files inside **PowerBI folder**.
-
----
-
-## 📉 Tableau Dashboard
-
-Designed an interactive Tableau dashboard with:  
-- Loan status segmentation  
-- Monthly trend  
-- State-wise performance  
-- Good vs Bad Loan split  
-
-Files inside **Tableau folder**.
-
----
-
-## 💡 Insights
-
-- **Debt consolidation** is the most common loan purpose  
-- Fully Paid loans contribute the highest share of amount received  
-- Borrowers with higher **DTI** tend to fall in bad loan category  
-- 36-month term loans are more common than 60-month  
-- Interest rate plays a major role in loan performance  
-- Some states consistently show higher funded amounts  
-
----
-
-## 🗂 Dataset Fields
-
-- loan_amount  
-- total_payment  
-- term  
-- issue_date  
-- emp_length  
-- int_rate  
-- dti  
-- purpose  
-- home_ownership  
-- loan_status  
-- address_state  
-- grade  
-- sub_grade  
-
----
-
-## 👤 Author
-
-**Mohammad Varis**  
-  
-
----
-
-
-
-
+LinkedIn: https://linkedin.com/in/mohammad-varish1/
